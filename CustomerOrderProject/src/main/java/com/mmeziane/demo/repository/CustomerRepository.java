@@ -1,5 +1,9 @@
 package com.mmeziane.demo.repository;
 
+/*
+ * Our CustomerRepository interface that works with Customer entities:
+ */
+
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;

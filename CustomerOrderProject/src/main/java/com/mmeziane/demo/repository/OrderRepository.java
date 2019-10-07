@@ -1,4 +1,7 @@
 package com.mmeziane.demo.repository;
+/*
+ * Our OrderRepository interface that works with Order entities:
+ */
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.access.prepost.PreAuthorize;
