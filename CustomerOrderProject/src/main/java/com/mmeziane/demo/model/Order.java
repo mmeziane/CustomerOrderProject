@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Order {
@@ -13,8 +15,12 @@ public class Order {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
+	@NotEmpty
+	@Size(min = 5, max = 50)
 	private String orderName;
 	
+	@NotEmpty
+	@Size(max = 100)
 	private String details;
 	
 	@ManyToOne
