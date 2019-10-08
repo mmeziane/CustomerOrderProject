@@ -42,12 +42,14 @@ public class CustomerService {
 	 * If a value is present, and the value matches the given Customer, 
 	 * return an Optional describing the value, otherwise return an empty Optional.
 	 */
-	public Optional<Customer> getCustomer(long id) {
-		
-		return customerRepository.findById(id);
-		
-		
-	}
+	/*
+	 * public Optional<Customer> getCustomer(long id) {
+	 * 
+	 * return customerRepository.findById(id);
+	 * 
+	 * 
+	 * }
+	 */
 	
 	public List<Customer> getCustomers() {
         List<Customer> customers = new ArrayList<>();
@@ -64,6 +66,11 @@ public class CustomerService {
 
         return customerList;
     }
+	
+	/*
+	 * If a value is present, and the value matches the given Customer, 
+	 * return an Optional describing the value, otherwise return an empty Optional.
+	 */
 	
 	public Customer getCustomer(Long id) {
 

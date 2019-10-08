@@ -1,5 +1,5 @@
 package com.mmeziane.demo.controller;
 
-public class CustomerOrderController {
+public class CustomerController {
 
 }

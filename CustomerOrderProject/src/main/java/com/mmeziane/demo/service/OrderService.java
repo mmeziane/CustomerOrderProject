@@ -35,6 +35,8 @@ public class OrderService {
 		return orders;
 	}
 	
+	
+	
 	public Order getOrder(long id) {
 		
 		/*
@@ -47,8 +49,17 @@ public class OrderService {
 		return orderData;
 	}
 	
+	public long countOrders() {
+		 return orderRepository.count();
+	}
+	
 	public void addOrder(Order order) {
 		orderRepository.save(order);
+	}
+	
+	public void saveAll(List<Order> orders) {
+		orderRepository.saveAll(orders);
+		
 	}
 	
 	
@@ -59,6 +70,8 @@ public class OrderService {
 	public void deleteOrder(long id) {
 		orderRepository.deleteById(id);
 	}
+
+	
 	
 	
 
