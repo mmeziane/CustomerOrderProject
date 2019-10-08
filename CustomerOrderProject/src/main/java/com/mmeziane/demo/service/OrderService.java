@@ -28,7 +28,7 @@ public class OrderService {
 		
 	}
 	
-	public List<Order> getAllOrders() {
+	public List<Order> getAllOrders(long orderId) {
 		
 		List<Order> orders = new ArrayList<>();
 		orderRepository.findAll().forEach(orders::add);
