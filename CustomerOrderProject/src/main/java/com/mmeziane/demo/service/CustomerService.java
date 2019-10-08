@@ -38,6 +38,10 @@ public class CustomerService {
 		
 	}
 	
+	/*
+	 * If a value is present, and the value matches the given Customer, 
+	 * return an Optional describing the value, otherwise return an empty Optional.
+	 */
 	public Optional<Customer> getCustomer(long id) {
 		
 		return customerRepository.findById(id);
@@ -52,6 +56,8 @@ public class CustomerService {
         List<Customer> customerList = new ArrayList<>();
         for (Customer customer : customers) {
             Customer cust = new Customer();
+            
+            /* To copy from cust to customer */
             BeanUtils.copyProperties(customer, cust);
             customerList.add(cust);
         }
