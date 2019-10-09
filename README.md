@@ -1,9 +1,24 @@
 # CustomerOrderProject
 
+## 4 Gebruikte tools en technologieën
+
+* Spring boot 2+
+* JDK 1.8+
+* Maven 3+
+* IDE - STS or Eclipse
+* REST API
+* Spring Data JPA
+* Actuator
+* Spring Security
+* JSR303 Bean validation
+* Spring REST Docs
+* Docker Image (Dockerfile)
+
  
 ## 1 Wat ga ik bouwen
 
 Ik ga een demo bouwen om informatie over alle customers en orders op teslaan.
+We zullen een CRUD RESTFul API's bouwen voor een Simple Customer Management System met behulp van Spring Boot 2 JPA- en H2-database. Hierna worden vijf REST API's (Controller handler-methoden) gemaakt.
 
 ## 2 Business Rules
 
@@ -21,16 +36,6 @@ Om een dergelijke schema te implementeren, heb ik “Cust_id” attribute as for
 ![image](https://user-images.githubusercontent.com/36681851/66329651-27ae9b80-e92f-11e9-9512-7284d3f1c2f1.png)
 
 
-## 4 Gebruikte tools en technologieën
 
-1. Spring boot 2+
-1. JDK 1.8+
-1. Maven 3+
-1. IDE - STS or Eclipse
-1. REST API
-1. Spring Data JPA
-1. Actuator
-1. Spring Security
-1. JSR303 Bean validation
-1. Spring REST Docs
-1. Docker Image (Dockerfile)
+
+![image](https://user-images.githubusercontent.com/36681851/66445775-418fd180-ea48-11e9-84a0-b90c2bb51f36.png)
