@@ -160,3 +160,28 @@ Om een dergelijke schema te implementeren, heb ik “Cust_id” attribute as for
 
 </project>
 
+## Dockerizing the Spring Boot App
+
+In dit demo wordt een nieuwe image met de naam dockerboot gemaakt, wordt het jar-file van het project naar de image gekopieerd en wordt een invoerpunt ingesteld dat de jar uitvoert.
+
+Als u een Docker file wilt gebruiken, moet u het dockerDirectory element opgeven. Indien opgegeven, worden de elementen baseImage, maintenance, cmd en entryPoint genegeerd. De inhoud van de dockerDirectory wordt gekopieerd naar $ {project.build.directory} / docker. Gebruik het element resources om extra files te kopiëren, zoals het jar file van de service.
+
+		<plugin>
+		      <groupId>com.spotify</groupId>
+		      <artifactId>docker-maven-plugin</artifactId>
+		      <configuration>
+		        <imageName>dockerboot</imageName>
+		        <baseImage>java:8</baseImage>
+		        <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+		        <!-- copy the service's jar file from target into the root directory of the image --> 
+		        <resources>
+		           <resource>
+		             <targetPath>/</targetPath>
+		             <directory>${project.build.directory}</directory>
+		             <include>${project.build.finalName}.jar</include>
+		           </resource>
+		        </resources>
+		      </configuration>
+		    </plugin>
+
+
